@@ -1,11 +1,11 @@
 <template>
-  <div class="home">
+  <div>
     <form @submit.prevent="fetchPhotos" class="search-form">
       <input v-model="query" type="text" class="search-form-input" />
       <select v-model="perPage" class="search-form-select">
         <option v-for="number in numbers" :key="number">{{ number }}</option>
       </select>
-      <BaseButton type="submit">Submit</BaseButton>
+      <BaseButton type="submit">Search</BaseButton>
     </form>
     <h1 v-if="loading">Loading photos</h1>
 
@@ -23,7 +23,7 @@
 import { mapState } from 'vuex'
 import PhotoCard from '../components/PhotoCard'
 export default {
-  name: 'Home',
+  name: 'Hickari-Unsplash-Search',
   components: {
     PhotoCard
   },
@@ -66,7 +66,8 @@ export default {
     padding: 0.6rem 1.5rem;
     border-radius: 0.2rem;
     border: none;
-    border-bottom: 2px solid #42b983;
+    border-bottom: 2px solid blue;
+    margin-right: 5px;
     transition: all 0.3s;
   }
   @media (min-width: 1500px) {
@@ -81,7 +82,7 @@ export default {
   }
 
   &-select {
-    padding: 0.6rem 1.5rem;
+    padding: 0.4rem 1.3rem;
     border: none;
     box-shadow: none;
     font-size: 1.1rem;

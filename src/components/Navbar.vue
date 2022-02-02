@@ -1,6 +1,8 @@
 <template>
   <div id="nav">
-    <router-link to="/" v-if="this.$route.name === 'Home'">Home</router-link>
+    <router-link to="/" v-if="this.$route.name === 'Home'"
+      >Hickari Unsplash Search</router-link
+    >
     <router-link to="/" v-if="this.$route.name !== 'Home'">Back</router-link>
   </div>
 </template>

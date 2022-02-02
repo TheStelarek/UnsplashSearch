@@ -56,11 +56,19 @@ export default {
   display: inline-block;
   font-family: 'Montserrat', 'Trebuchet MS', Helvetica, sans-serif;
   padding: 0.6rem 1.5rem;
-  background: #42b983;
+  background: black;
   border: none;
   color: white;
-  transition: 0.2s;
-  text-align: center;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: all 1s ease-out;
+  border: 1px black solid;
+
+  &:hover {
+    color: black;
+    background: white;
+    border: 1px black solid;
+  }
 }
 a {
   text-decoration: none;
